@@ -6,18 +6,103 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="./css/my_style.css">
+
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+
+    <script src="./js/index.js"></script>
 
     <title>Bootstrap-Template</title>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-light bg-light">
-            <span class="navbar-text">
-                Navbar text with an inline element
-            </span>
+    <div class="position- header bg-white">
+        <div class="bg-light">
+            <ul class="container nav justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link text-muted" href="#"><i class="fa fa-map-marker-alt"></i> Handlersuche</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-muted" href="#"><i class="fa fa-poll-h"></i> Fachberatersuche</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-muted" href="#"><i class="fa fa-user"></i> Kontakt</a>
+                </li>
+            </ul>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white container">
+            <a class="navbar-brand" href="#">
+                <img src="./assets/logo.svg" alt="Logo" height="90px">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <button class="btn btn-light d-flex align-items-stretch">
+                            <div class="d-flex flex-column bd-highlight mb-3">
+                                <div class="p-2 item_text bd-highlight">Multicolor</div>
+                                <div class="p-2 item_icon bd-highlight text-primary"><i class="fa fa-angle-down"></i></div>
+                            </div>
+                    </button>
+                    <button class="btn btn-light d-flex align-items-stretch">
+                            <div class="d-flex flex-column bd-highlight mb-3">
+                                <div class="p-2 item_text bd-highlight">Farbberatung</div>
+                                <div class="p-2 item_icon bd-highlight text-primary"><i class="fa fa-angle-down"></i></div>
+                            </div>
+                    </button>
+                    <button class="btn btn-light d-flex align-items-stretch">
+                            <div class="d-flex flex-column bd-highlight mb-3">
+                                <div class="p-2 item_text bd-highlight">Produkt</div>
+                                <div class="p-2 item_icon bd-highlight text-primary"><i class="fa fa-angle-down"></i></div>
+                            </div>
+                    </button>
+                    <button class="btn btn-light d-flex align-items-stretch">
+                            <div class="d-flex flex-column bd-highlight mb-3">
+                                <div class="p-2 item_text bd-highlight">Service</div>
+                                <div class="p-2 item_icon bd-highlight text-primary"><i class="fa fa-angle-down"></i></div>
+                            </div>
+                    </button>
+                </div>
+            </div>
         </nav>
-    </header>
+    </div>
+
+
+    <div>
+        <div class="brand-container">
+            <div class="container">
+                <img  src="./assets/slide1-overlay.png" alt="" height="80%">
+                <div class="d-flex align-items-end flex-column bd-highlight mb-3" style="height: 100%;">
+                        <div class="p-2 bd-highlight">Flex item</div>
+                        <div class="p-2 bd-highlight">Flex item</div>
+                    <div class="mt-auto p-2 bd-highlight">
+                        <div class="card bg-dark" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Special title treatment</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav nav-pills nav-fill bg-ligth">
+        <a class="nav-item nav-link" href="#">
+            <i class="fa fa-comments"></i> <span> Jetzt Chatten </span>
+        </a>
+        <a class="nav-item nav-link" href="#">
+            <i class="fa fa-thumbs-up"></i> <span> Referenzprojekt </span>
+        </a>
+        <a class="nav-item nav-link" href="#">
+            <i class="fa fa-play-circle"></i> <span> Video ansehen </span>
+        </a>
+    </div>
 </body>
 </html>

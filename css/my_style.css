@@ -1,0 +1,28 @@
+.item_text {
+    height: 25px;
+}
+.item_icon {
+    height: 0px;
+}
+.brand-container {
+    height: 75vh;
+    background: url('../assets/slide1@2x.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+    padding: 50px 0px;
+}
+.header {
+    width: 100vw;
+}
+
+.brand-container img {
+    position: absolute;
+    margin-left: -100px;
+}
+
+.brand-container > div {
+    height: 100%;
+}
