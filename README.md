@@ -5,8 +5,8 @@
     npm install
     cd css
     sass main.scss main.css
-    cs ..
-    run index.html
+    cd ..
+    // run index.html in the browser
   ```
 ## Project Url
 http://kommdirekt-aufgabe.surge.sh/
