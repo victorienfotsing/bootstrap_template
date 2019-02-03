@@ -5,22 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     
-    <link rel="stylesheet" href="./css/my_style.css">
-
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-    <!-- <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
-
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./lib/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./lib/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="./lib/slick/slick-theme.css">
+    <link rel="stylesheet" href="./node_modules/animate.css/animate.min.css">
+    
+    <link rel="stylesheet" href="./css/my_style.css">
     <script src="./js/index.js"></script>
 
     <title>Bootstrap-Template</title>
 </head>
 <body>
-    <div class="position- header bg-white">
-        <div class="bg-light">
+    <div id="header" class="position-relative bg-white animated faster">
+        <div class="bg-light d-none d-sm-block animated fadeInDown">
             <ul class="container nav justify-content-end">
                 <li class="nav-item">
                     <a class="nav-link text-muted" href="#"><i class="fa fa-map-marker-alt"></i> Handlersuche</a>
@@ -33,58 +36,271 @@
                 </li>
             </ul>
         </div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-white container">
-            <a class="navbar-brand" href="#">
-                <img src="./assets/logo.svg" alt="Logo" height="90px">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <button class="btn btn-light d-flex align-items-stretch">
-                            <div class="d-flex flex-column bd-highlight mb-3">
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-white container">
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/logo.svg" alt="Logo" height="90px">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <button class="btn btn-light d-flex justify-content-center">
+                            <div class="d-flex flex-sm-column bd-highlight mb-3">
                                 <div class="p-2 item_text bd-highlight">Multicolor</div>
                                 <div class="p-2 item_icon bd-highlight text-primary"><i class="fa fa-angle-down"></i></div>
                             </div>
-                    </button>
-                    <button class="btn btn-light d-flex align-items-stretch">
-                            <div class="d-flex flex-column bd-highlight mb-3">
+                        </button>
+                        <button class="btn btn-light d-flex justify-content-center">
+                            <div class="d-flex flex-sm-column bd-highlight mb-3">
                                 <div class="p-2 item_text bd-highlight">Farbberatung</div>
                                 <div class="p-2 item_icon bd-highlight text-primary"><i class="fa fa-angle-down"></i></div>
                             </div>
-                    </button>
-                    <button class="btn btn-light d-flex align-items-stretch">
-                            <div class="d-flex flex-column bd-highlight mb-3">
+                        </button>
+                        <button class="btn btn-light d-flex justify-content-center">
+                            <div class="d-flex flex-sm-column bd-highlight mb-3">
                                 <div class="p-2 item_text bd-highlight">Produkt</div>
                                 <div class="p-2 item_icon bd-highlight text-primary"><i class="fa fa-angle-down"></i></div>
                             </div>
-                    </button>
-                    <button class="btn btn-light d-flex align-items-stretch">
-                            <div class="d-flex flex-column bd-highlight mb-3">
+                        </button>
+                        <button class="btn btn-light d-flex justify-content-center">
+                            <div class="d-flex flex-sm-column bd-highlight mb-3">
                                 <div class="p-2 item_text bd-highlight">Service</div>
                                 <div class="p-2 item_icon bd-highlight text-primary"><i class="fa fa-angle-down"></i></div>
                             </div>
-                    </button>
+                        </button>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </div>
-
-
+        
     <div>
         <div class="brand-container">
             <div class="container">
-                <img  src="./assets/slide1-overlay.png" alt="" height="80%">
+                <div class="col-11 col-sm-6 position-relative">
+                    <img src="./assets/slide1-overlay.png" alt="" class="img-fluid position-absolute">
+                </div>
                 <div class="d-flex align-items-end flex-column bd-highlight mb-3" style="height: 100%;">
-                        <div class="p-2 bd-highlight">Flex item</div>
-                        <div class="p-2 bd-highlight">Flex item</div>
-                    <div class="mt-auto p-2 bd-highlight">
-                        <div class="card bg-dark" style="width: 18rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">Special title treatment</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <div class="mt-auto p-2 bd-highlight" style="width: 100%; z-index: 3;">
+                        <div class="d-flex align-items-end">
+                            <div class="d-flex mr-2 animated fadeInLeft">
+                                <button class="btn btn-primary btn-sm mr-2"><i class="fa fa-arrow-left"></i></button>
+                                <button class="btn btn-primary btn-sm mr-2"><i class="fa fa-arrow-left"></i></button>
+                                <button class="btn btn-primary btn-sm mr-2"><i class="fa fa-arrow-up"></i></button>
+                            </div> 
+                            <div class="card bg-dark ml-auto animated fadeInDown">
+                                <div class="card-body text-light" style="max-width: 42rem;">
+                                    <h3 class="h3 card-title">Fugen - eine Frage des Geschmacks</h3>
+                                    <p class="card-text d-none d-sm-block">Die Fugenfarbe beeinflusst wesentlich das Erscheinungsbild der Fliese und somit des Raums Schopfen Sie bei der Farbpalette des Highlight-Produkts PCI Durapox Premium Multicolor aus dem Vollen - und finden Sie zu jeder Fliese dieser Welt den passenden Farbton.</p>
+                                    <a href="#" class="btn btn-primary col-12 col-sm-2 col-md-4">Mehr Erfahren</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div class="d-none d-lg-block cust_tab">
+        <div class="nav nav-pills nav-fill bg-light">
+            <a class="nav-item nav-link mr-2" href="#">
+                <i class="fa fa-comments"></i> <span> Jetzt Chatten </span>
+            </a>
+            <a class="nav-item nav-link mr-2" href="#">
+                <i class="fa fa-thumbs-up"></i> <span> Referenzprojekt </span>
+            </a>
+            <a class="nav-item nav-link" href="#">
+                <i class="fa fa-play-circle"></i> <span> Video ansehen </span>
+            </a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="jumbotron jumbotron-fluid bg-white">
+                    <div class="container text-wrap  animated fadeInLeft">
+                        <h1 class="h1">Fugen - eine Frage des Geschmacks</h1>
+                        <p>
+                            Koch Profis bringen harmonie und uberraschende Geschmackskompositionen
+                            auf die Teller je nach individuellen Geschmack Inderr sie mit Gewürzen und
+                            Krautern feinste Nuancen teren und Zutaten gekonnt kombinieren. Genau in
+                            diese Lage versetzen Sie auch die Fugenlösungen von PCL Sie tragen
+                            wesentlich dazu bei, dass Sie für jeden Lebensraum die optisch passende
+                            Fugenfarbe finden - im Farbton der ausgewählten Fliese, kontrastierend dazu
+                            oder entsprechend anderer Farben im Raum Ganz nach Ihrem Geschmack
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 d-flex align-items-center">
+                <img src="./assets/img1.PNG" class="img-fluid" alt="Responsive image">
+            </div>
+        </div>
+            <hr class=" my-4">
+        <div class="row"> 
+            <div class="col-12">
+                <div class="jumbotron jumbotron-fluid bg-white animated fadeInUp">
+                    <div class="container">
+                        <h1 class="h1">Grenzenlose Gestaltungsmöglichkeiten für individuelle Lebensräume</h1>
+                        <p>
+                            PCI Durapox Premium Multicolor gibt es in jedem beliebigen Fugen-Farbton Ihrer Kreativitat sind keine Grenzen mehr gesetzt
+                            Der Epoxidharzmörtel vereint die technischen Highlights und Verarbeitungseigenschaften von PCI Durapox Premiun mit einer grenzenlosen
+                            Farbvielfalt for individuelle Gestaltung Stimmen Sie die Fugenfarbe exakt auf die Fliesenfarbe ab oder finden Sie die passende Kontrastfarbe
+                            Das grenzenlose Farbspektrum bedeutet maximale Gestaltungsfreiheit beim Planen und Verfugen Ihres Lebensraums. Professionelle
+                            Farbberatung bietet Ihnen PCI Colorcatch Nano
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        
+    <div class="container pb-5">
+        <div class="center slider">
+            <div>
+                <img src="./assets/Gruppe-738.png">
+            </div>
+            <div>
+                <img src="./assets/Gruppe-739.png">
+            </div>
+            <div>
+                <img src="./assets/Gruppe-740.png">
+            </div>
+            <div>
+                <img src="./assets/Gruppe-741.png">
+            </div>
+            <div>
+                <img src="./assets/Gruppe-742.png">
+            </div>
+            <div>
+                <img src="./assets/Gruppe-743.png">
+            </div>
+            <div>
+                <img src="./assets/Gruppe-744.png">
+            </div>
+        </div>
+        
+        <div class="p-5"></div>
+    </div>
+    <div class="bg-light pb-5">
+        <div class="container">
+            <div class="jumbotron jumbotron-fluid bg-transparent">
+                <div class="container text-wrap animated fadeInLeft">
+                    <h1 class="h1">Fugen - eine Frage des Geschmacks</h1>
+                    <p>
+                        Koch Profis bringen harmonie und uberraschende Geschmackskompositionen
+                        auf die Teller je nach individuellen Geschmack Inderr sie mit Gewürzen und
+                        Krautern feinste Nuancen teren und Zutaten gekonnt kombinieren. Genau in
+                        diese Lage versetzen Sie auch die Fugenlösungen von PCL Sie tragen
+                        wesentlich dazu bei, dass Sie für jeden Lebensraum die optisch passende
+                        Fugenfarbe finden - im Farbton der ausgewählten Fliese, kontrastierend dazu
+                        oder entsprechend anderer Farben im Raum Ganz nach Ihrem Geschmack
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="center slider">
+            <div>
+                <img src="./assets/Gruppe-761.png">
+            </div>
+            <div>
+                <img src="./assets/Gruppe-762.png">
+            </div>
+            <div>
+                <img src="./assets/Gruppe-763.png">
+            </div>
+            <div>
+                <img src="./assets/Gruppe-764.png">
+            </div>
+            <div>
+                <img src="./assets/Gruppe-765.png">
+            </div>
+        </div>
+        <div class="p-5"></div>
+    </div>
+    <div class="foot">
+        <div class="wave">
+            <img src="./assets/footer-wave.svg" class="position-absolute" alt="">
+        </div>
+        <div class="bg-black">
+            <div class="container">
+                <div class="row text-white">
+                    <div class="col d-none d-md-block">
+                        <div class="jumbotron jumbotron-fluid bg-transparent">
+                            <div class="container">
+                                <ul class="list-unstyled">
+                                    <li><a class="font-weight-bold text-decoration-none text-light" href="#">Multicolor</a></li>
+                                    <li><a class="font-weight-normal text-decoration-none text-light" href="#">Story</a></li>
+                                    <li><a class="font-weight-normal text-decoration-none text-light" href="#">Lebensräume</a></li>
+                                    <li><a class="font-weight-normal text-decoration-none text-light" href="#">Bildergalerie</a></li>
+                                    <li><a class="font-weight-normal text-decoration-none text-light" href="#">Fugenvergleich</a></li>
+                                    <li><a class="font-weight-normal text-decoration-none text-light" href="#">Broschüren</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-none d-md-block">
+                        <div class="jumbotron jumbotron-fluid bg-transparent">
+                            <div class="container">
+                                <ul class="list-unstyled">
+                                    <li><a class="font-weight-bold text-decoration-none text-light" href="#">Farbberatung</a></li>
+                                    <li><a class="font-weight-normal text-decoration-none text-light" href="#">PCI Farbfächer Multicolor</a></li>
+                                    <li><a class="font-weight-normal text-decoration-none text-light" href="#">PCI Colorcatch Nano</a></li>
+                                    <li><a class="font-weight-normal text-decoration-none text-light" href="#">PCI APP Multicolor</a></li>
+                                    <li><a class="font-weight-normal text-decoration-none text-light" href="#">Funktionsschritte</a></li>
+                                    <li><a class="font-weight-normal text-decoration-none text-light" href="#">App Download</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-none d-md-block">
+                        <div class="jumbotron jumbotron-fluid bg-transparent">
+                            <div class="container">
+                                <ul class="list-unstyled">
+                                    <li><a class="font-weight-bold text-decoration-none text-light" href="#">Produkt</a></li>
+                                    <li><a class="font-weight-normal text-decoration-none text-light" href="#">PCI Durapox&reg; Premium Multicolor</a></li>
+                                    <li><a class="font-weight-normal text-decoration-none text-light" href="#">PCI Durapox&reg; Premium</a></li>
+                                    <li><a class="font-weight-normal text-decoration-none text-light" href="#">PCI Durapox&reg; Finish</a></li>
+                                    <li><a class="font-weight-normal text-decoration-none text-light" href="#">Plus X Award</a></li>
+                                    <li><a class="font-weight-normal text-decoration-none text-light" href="#">PCI Nanofug&reg; Premium</a></li>
+                                    <li><a class="font-weight-normal text-decoration-none text-light" href="#">PCI Premium Glitter</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-none d-md-block">
+                        <div class="jumbotron jumbotron-fluid bg-transparent">
+                            <div class="container">
+                                <ul class="list-unstyled">
+                                    <li><a class="font-weight-bold text-decoration-none text-light" href="#">Service</a></li>
+                                    <li><a class="font-weight-normal text-decoration-none text-light" href="#">FAQ</a></li>
+                                    <li><a class="font-weight-normal text-decoration-none text-light" href="#">Händlersuche</a></li>
+                                    <li><a class="font-weight-normal text-decoration-none text-light" href="#">Fachberatersuche</a></li>
+                                    <li><a class="font-weight-normal text-decoration-none text-light" href="#">Broschüren</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-md-none">
+                        <div class="jumbotron jumbotron-fluid bg-transparent">
+                            <div class="container">
+                                <ul class="list-unstyled">
+                                    <li><a class="font-weight-bold text-decoration-none text-light" href="#">Multicolor</a></li>
+                                    <li><a class="font-weight-bold text-decoration-none text-light" href="#">Farbberatung</a></li>
+                                    <li><a class="font-weight-bold text-decoration-none text-light" href="#">Produkt</a></li>
+                                    <li><a class="font-weight-bold text-decoration-none text-light" href="#">Service</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col text-center">
+                        <div class="jumbotron jumbotron-fluid bg-transparent">
+                            <div class="container">
+                                <img src="./assets/premium.png" class="img-fluid" alt="" srcset="">
                             </div>
                         </div>
                     </div>
@@ -92,17 +308,23 @@
             </div>
         </div>
     </div>
-
-    <div class="nav nav-pills nav-fill bg-ligth">
-        <a class="nav-item nav-link" href="#">
-            <i class="fa fa-comments"></i> <span> Jetzt Chatten </span>
-        </a>
-        <a class="nav-item nav-link" href="#">
-            <i class="fa fa-thumbs-up"></i> <span> Referenzprojekt </span>
-        </a>
-        <a class="nav-item nav-link" href="#">
-            <i class="fa fa-play-circle"></i> <span> Video ansehen </span>
-        </a>
+    <div class="bottom">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            
+            <div class="container" id="">
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/logo-black.svg" alt="Logo" height="60px">
+                </a>
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">AGB / Impressum/Rechtliche Hinweise / Datenschutzerklärung</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav my-2 my-lg-0">
+                    &copy; 2019 PCI Augsburg GmbH
+                </ul>
+            </div>
+        </nav>
     </div>
 </body>
 </html>
