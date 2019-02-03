@@ -5,6 +5,11 @@ html, body, * {
 body {
     overflow-x: hidden;
 }
+#header{
+    top: 0px;
+    z-index: 200;
+    width: 100vw;
+}
 .item_text {
     height: 25px;
 }
