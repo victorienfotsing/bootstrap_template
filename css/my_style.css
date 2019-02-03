@@ -1,3 +1,10 @@
+html, body, * {
+    font-family: "Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-weight: 200;
+}
+body {
+    overflow-x: hidden;
+}
 .item_text {
     height: 25px;
 }
@@ -14,15 +21,95 @@
     position: relative;
     padding: 50px 0px;
 }
+
+@media (min-width: 576px) {
+    .brand-container {
+        min-height: 400px;
+    }
+}
+@media (min-width: 768px) {
+    .brand-container {
+        min-height: 600px;
+    }
+}
+
 .header {
     width: 100vw;
 }
 
 .brand-container img {
-    position: absolute;
-    margin-left: -100px;
+    z-index: 0;
 }
-
+    
 .brand-container > div {
     height: 100%;
+}
+
+.cust_tab {
+    font-size: 20px;
+    line-height: 50px;
+}
+
+.cust_tab i {
+    font-size: 25px;
+}
+.jumbotron {
+    word-wrap: break-word;
+}
+.bg-black {
+    background-color: black;
+}
+.foot {
+    position: relative;
+}
+.wave img{
+    position: absolute; 
+    margin: auto; 
+    min-width: 100%;
+    min-height: 260px;
+}
+.wave {
+    position: relative;
+    height: 150px;
+}
+.foot .bg-black {
+    padding-top: 60px;
+}
+h1.h1, h2.h2, h3.h3 {
+    font-weight: 100;
+}
+
+
+.slider {
+    margin: 100px auto;
+}
+
+.slick-slide {
+  margin: 0px 20px;
+}
+
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+
+
+.slick-slide {
+  transition: all ease-in-out .3s;
+  opacity: .2;
+}
+
+.slick-active {
+  opacity: .3;
+  width: 100px;
+}
+
+.slick-current {
+    opacity: 1;
+}
+.slick-current img{
 }
